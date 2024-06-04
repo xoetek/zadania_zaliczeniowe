@@ -1,0 +1,106 @@
+body,html {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+#app{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #333, #444);
+}
+#pageCont{
+    text-align: center;
+    width: 100vw;
+    height: 93vh;
+    padding: 30px;
+    background-image: linear-gradient(to bottom, #333, #444);
+}
+#expandSection{
+    background-color: #444;
+    width: 30px;
+    height: 93vh;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    border: 0px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0% 25% 25% 0%;
+    float: left;
+}
+header {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  height: 5vh;
+  background-image: linear-gradient(to bottom, #333, #444);
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 24px;
+  margin: 0 auto;
+}
+#left-section {
+  text-align: center;
+  text-indent: -100px;
+  visibility: hidden;
+  width: 0vh;
+  height: 93vh;
+  opacity: 100;
+  background-color: #444;
+  transition: height 1s, width 1s, padding 1s, visibility 1s, opacity 0.5s, text-indent 1s ease-out;
+  float: left;
+}
+#left-section.expanded {
+  text-align: center;
+  text-indent: 0px;
+  visibility: visible;
+  width: 25vh;
+  height: 93vh;
+  opacity: 100;
+  transition: height 1s, width 1s, padding 1s, visibility 1s, opacity 0.5s, text-indent 1s ease-out;
+}
+.imgButton{
+  background-color: #333;
+  margin: 10px;
+}
+.stackedImg{
+    opacity: 0%;
+    width: 0%;
+    height: 0%;
+    transition: opacity 1s ease-out; 
+}
+.activeImg{
+  width: 400px;
+  height: 400px;
+  opacity: 100%;
+  transition: opacity 1s ease-out;
+}
+.prev{
+  position: relative;
+  left: -299px;
+  width: 180px;
+  height: 180px;
+  margin: 10px;
+  transition: left 1s ease-out;
+}
+.prevExpanded{
+  position: relative;
+  left: 0px;
+  box-shadow: none;
+  width: 180px;
+  height: 180px;
+  margin: 10px;
+  transition: left 1s ease-out, box-shadow 0.2s ease-out;
+}
+.prevExpanded:hover{
+  box-shadow: 5px 5px 5px black;
+  transition: left 1s ease-out, box-shadow 0.2s ease-out;
+}
+footer{
+  width: 100vw;
+  height: 2vh;
+  background-image: linear-gradient(to bottom, #333, #444);
+  text-align: center;
+}
